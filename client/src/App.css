@@ -767,7 +767,7 @@ a {
   width: 60em;
   border-radius: 0.6em;
   margin: 1em;
-  cursor: pointer;
+
   box-shadow: 0 13px 27px -5px hsla(0, 0%, 100%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
   transition: all ease 200ms;
 }
@@ -805,10 +805,10 @@ a {
 
   .dcard { 
     background: #ffffff;
-    width: 20em;
+    width: 21em;
     border-radius: 0.6em;
     margin: 1em;
-    cursor: pointer;
+    
     box-shadow: 0 13px 27px -5px hsla(0, 0%, 100%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
     transition: all ease 200ms;
   }

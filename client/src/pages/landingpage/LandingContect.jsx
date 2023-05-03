@@ -23,7 +23,10 @@ function LandingContect() {
   return (
     <section className="contact section " id="contact">
       <h2 className="section__title">Contact Us</h2>
-      <span className="section__subtitle">Get in touch</span>
+      <span className="section__subtitle">
+        Your health is our top priority, and so is your satisfaction. If you
+        have any questions, concerns, or suggestions, please let us know.
+      </span>
       <div className="contact__container container grid">
         <div>
           <div className="contact__information">

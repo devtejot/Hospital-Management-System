@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "../components/Layout";
-import { Col, Row } from "antd";
+import { Col, Row, Typography } from "antd";
 import DoctorList from "../components/DoctorList";
 import Box from "@mui/material/Box";
 
@@ -35,7 +35,7 @@ const HomePage = () => {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Make Your Appointment</h2>
+            <Typography.Title level={4}>Available Doctors</Typography.Title>
             <hr />
             <Row gutter={20}>
               {doctors &&

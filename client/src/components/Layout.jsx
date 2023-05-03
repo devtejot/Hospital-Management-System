@@ -159,7 +159,7 @@ export default function MiniDrawer() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             <a href="/" className="dnav__logo">
-              <b>WeCare</b>
+              <b>MedSys</b>
             </a>
           </Typography>
         </Toolbar>

@@ -1,4 +1,4 @@
-import { DatePicker, TimePicker, message } from "antd";
+import { DatePicker, TimePicker, message, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { useDispatch, useSelector } from "react-redux";
@@ -116,7 +116,7 @@ const BookingPage = () => {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Booking Page</h2>
+            <Typography.Title level={4}>Booking Page</Typography.Title>
             <hr />
             <div className="bookingpage">
               <div className="card-body">

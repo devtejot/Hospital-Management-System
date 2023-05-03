@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Layout from "../../components/Layout";
 import Box from "@mui/material/Box";
+import { Typography } from "antd";
 
 function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -29,10 +30,10 @@ function Blog() {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Blog Section</h2>
+            <Typography.Title level={4}>Blog</Typography.Title>
             <hr />
             <div>
-              <h4>Add Blog</h4>
+              <h6>Add Blog</h6>
               <form onSubmit={handleSubmit} className="blog-form">
                 <input
                   type="text"

@@ -1,4 +1,4 @@
-import { Tabs, message } from "antd";
+import { Tabs, message, Typography } from "antd";
 import axios from "axios";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -68,7 +68,7 @@ const NotificationPage = () => {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Notifications</h2>
+            <Typography.Title level={4}>Notificaions</Typography.Title>
             <hr />
 
             <Tabs className="tabs">

@@ -34,7 +34,7 @@ const LandingDoctors = () => {
   return (
     <section className="services section" id="services">
       <h2 className="section__title">Doctors</h2>
-      <span className="section__subtitle">What I offer</span>
+      <span className="section__subtitle">Meet Our Doctors</span>
       <div className="servicecontainer ">
         <div
           style={{

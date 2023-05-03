@@ -2,9 +2,15 @@ import React from "react";
 
 const LandingDepart = () => {
   return (
-    <section className="services section" id="services">
+    <section className="services section container" id="services">
       <h2 className="section__title">Departments</h2>
-      <span className="section__subtitle">What we offer</span>
+      <span className="section__subtitle">
+        The Departments provides information about the different medical
+        specialties and services offered by our hospital. It is designed to help
+        patients and their families learn more about the medical conditions and
+        treatments we offer, and to help them make informed decisions about
+        their healthcare.
+      </span>
       <div className="container ">
         <div
           style={{

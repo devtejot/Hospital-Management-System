@@ -30,10 +30,17 @@ const DoctorMain = () => {
   return (
     <>
       <LandingNav />
-      <section className="services section" id="services">
+      <section className="services section container" id="services">
         <h2 className="section__title">Doctors</h2>
-        <span className="section__subtitle">Meet the best doctors</span>
-        <div className="container ">
+        <span className="section__subtitle">
+          A page dedicated to showcasing the doctors at our hospital, with their
+          credentials, specializations, and experience. Get to know our team of
+          experts and their commitment to providing the best care possible. View
+          their profiles, learn about their areas of expertise, and book
+          appointments with ease. Trust in our skilled doctors for all your
+          healthcare needs.
+        </span>
+        <div className="container">
           <div
             style={{
               display: "flex",

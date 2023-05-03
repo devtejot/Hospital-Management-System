@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Layout from "./../components/Layout";
-import { Col, Form, Row, Input, TimePicker, message } from "antd";
+import { Col, Form, Row, Input, TimePicker, message, Typography } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
@@ -55,7 +55,7 @@ export const ApplyDoctor = () => {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Apply Doctor</h2>
+            <Typography.Title level={4}>Apply Doctor</Typography.Title>
             <hr />
             <Form layout="vertical" onFinish={handleFinish} className="m-3">
               <h4>Personal Datails:</h4>

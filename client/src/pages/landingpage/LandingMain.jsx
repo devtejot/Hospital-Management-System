@@ -11,19 +11,15 @@ const LandingPage = () => {
         <div className="container">
           <div className="home__content gridhome">
             <div>
-              <h1 className="home__title">
-                We Provide Best
-                <br />
-                Healthcare
-              </h1>
+              <h1 className="home__title">Your Health is Our Priority</h1>
               <h3 className="home__subtitle">Meet the best doctors</h3>
               <p className="home__description">
-                Great doctors if you need your family member to get effective
-                <br /> immediate assistance, emergency treatment or a simple
-                consultation.
+                We understand that your health is important to you. That's why
+                we go above and beyond to ensure that you receive the highest
+                quality care possible.
               </p>
               <a href="/login" className="button button--flex">
-                Make Appointment <i class="fa-solid fa-arrow-right"></i>
+                Make Appointment
               </a>
             </div>
             <div className="">

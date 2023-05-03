@@ -17,9 +17,14 @@ const BlogMain = () => {
   return (
     <>
       <LandingNav />
-      <section className="services section" id="services">
+      <section className="services section container" id="services">
         <h2 className="section__title">Blog</h2>
-        <span className="section__subtitle">What our doctors says</span>
+        <span className="section__subtitle">
+          Explore our blog to discover helpful tips, inspiring stories, and
+          valuable resources that can improve your health and wellbeing. From
+          nutrition and fitness to mental health and parenting, we cover a wide
+          range of topics that matter to you.
+        </span>
         <div className="container ">
           {blogs.map((blog) => (
             <div

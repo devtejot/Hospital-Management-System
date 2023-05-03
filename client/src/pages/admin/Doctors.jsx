@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "./../../components/Layout";
 import axios from "axios";
-import { Table, message } from "antd";
+import { Table, message, Typography } from "antd";
 import Box from "@mui/material/Box";
 
 const Doctors = () => {
@@ -95,7 +95,7 @@ const Doctors = () => {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Doctors List</h2>
+            <Typography.Title level={4}>Doctors</Typography.Title>
             <hr />
             <Table columns={columns} dataSource={users} />
           </div>

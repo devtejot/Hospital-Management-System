@@ -27,7 +27,6 @@ const AboutMain = () => {
             <div className="about__buttons">
               <a href="/contects" className="button button--flex">
                 Contect Us
-                <i className="uil uil-arrow-to-bottom button__icon" />
               </a>
             </div>
           </div>

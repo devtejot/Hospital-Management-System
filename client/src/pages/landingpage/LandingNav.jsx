@@ -5,7 +5,7 @@ const LandingNav = () => {
     <header className="header" id="header">
       <nav className="nav container">
         <a href="/" className="nav__logo">
-          <b>WeCare</b>
+          <b>MedSys</b>
         </a>
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list grid">

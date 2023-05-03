@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import { Col, Form, Input, Row, TimePicker, message } from "antd";
+import { Col, Form, Input, Row, TimePicker, message, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../../redux/features/alertSlice";
@@ -81,7 +81,7 @@ const Profile = () => {
         <Layout />
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <div className="dashboard-container">
-            <h2 className="text-center">Doctor Profile</h2>
+            <Typography.Title level={4}>Update your profile</Typography.Title>
             <hr />
             {doctor && (
               <Form
