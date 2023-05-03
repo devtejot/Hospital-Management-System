@@ -122,6 +122,11 @@ export default function MiniDrawer() {
       icon: "fa-solid fa-stethoscope",
     },
     {
+      name: "Blog",
+      path: "/addblog",
+      icon: "fa-solid fa-blog",
+    },
+    {
       name: "Profile",
       path: `/doctor/profile/${user?._id}`,
       icon: "fa-solid fa-address-card",
@@ -247,13 +252,7 @@ export default function MiniDrawer() {
             </ListItemButton>
           </ListItem>
 
-          <ListItem
-            button
-            component="a"
-            href="profile"
-            disablePadding
-            sx={{ display: "block" }}
-          >
+          <ListItem disablePadding sx={{ display: "block" }}>
             <ListItemButton
               sx={{
                 minHeight: 48,

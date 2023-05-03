@@ -2,24 +2,24 @@ import React from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
-  ["Year", "Sales", "Expenses", "Profit"],
-  ["2014", 1000, 400, 200],
-  ["2015", 1170, 460, 250],
-  ["2016", 660, 1120, 300],
-  ["2017", 1030, 540, 350],
+  ["Year", "Patients", "Appointments", "Doctors"],
+  ["2019", 59, 65, 20],
+  ["2020", 121, 111, 30],
+  ["2021", 150, 160, 42],
+  ["2022", 200, 226, 53],
 ];
 
 export const options = {
   chart: {
-    title: "Company Performance",
-    subtitle: "Sales, Expenses, and Profit: 2014-2017",
+    title: "Hospital Growth",
+    subtitle: "Patients, Appointments, and Doctors: 2014-2017",
   },
 };
 
-export default function BarChart() {
+export default function LineChart() {
   return (
     <Chart
-      chartType="Bar"
+      chartType="Line"
       width="100%"
       height="400px"
       data={data}

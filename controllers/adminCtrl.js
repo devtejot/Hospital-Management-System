@@ -1,13 +1,16 @@
 const doctorModel = require("../models/doctorModel");
 const userModel = require("../models/userModels");
+const appointmentModel = require("../models/appointmentModel");
 
 const getAllUsersController = async (req, res) => {
   try {
     const users = await userModel.find({});
+    const count = await userModel.countDocuments({});
     res.status(200).send({
       message: "Users fetched successfully",
       success: true,
       data: users,
+      count: count,
     });
   } catch (error) {
     console.log(error);
@@ -22,10 +25,12 @@ const getAllUsersController = async (req, res) => {
 const getAllDoctorsController = async (req, res) => {
   try {
     const doctors = await doctorModel.find({});
+    const count = await doctorModel.countDocuments({});
     res.status(200).send({
       message: "Doctors fetched successfully",
       success: true,
       data: doctors,
+      count: count,
     });
   } catch (error) {
     console.log(error);
@@ -69,23 +74,48 @@ const changeAccountStatusController = async (req, res) => {
   }
 };
 
-const contectUs = async (req, res) => {
-  const { name, email, message } = req.body;
-
-  // Create a new document using the Contact schema
-  const contact = new Contact({
-    name,
-    email,
-    message,
-  });
-
+const getAllAppointmentsController = async (req, res) => {
   try {
-    // Save the new document to the database
-    await contact.save();
-    res.status(201).send("Contact message saved successfully!");
+    const appointments = await appointmentModel.find({});
+    const count = await appointmentModel.countDocuments({});
+    res.status(200).send({
+      message: "Appointments fetched successfully",
+      success: true,
+      data: appointments,
+      count: count,
+    });
   } catch (error) {
-    console.error(error);
-    res.status(500).send("Error saving contact message");
+    console.log(error);
+    res.status(500).send({
+      message: "Error while fetching Appointments",
+      success: false,
+      error,
+    });
+  }
+};
+
+//delete user
+const deleteUserController = async (req, res) => {
+  try {
+    const user = await userModel.findByIdAndDelete(req.params.id);
+    if (!user) {
+      res.status(404).send({
+        message: "User not found",
+        success: false,
+      });
+      return;
+    }
+    res.status(200).send({
+      message: "User deleted successfully",
+      success: true,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      message: "Error while deleting user",
+      success: false,
+      error,
+    });
   }
 };
 
@@ -93,5 +123,6 @@ module.exports = {
   getAllDoctorsController,
   getAllUsersController,
   changeAccountStatusController,
-  contectUs,
+  getAllAppointmentsController,
+  deleteUserController,
 };

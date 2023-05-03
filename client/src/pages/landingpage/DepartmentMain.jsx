@@ -1,6 +1,5 @@
 import React from "react";
 import LandingNav from "./LandingNav";
-import "../../styles/Docpage.css";
 import LandingFooter from "./LandingFooter";
 
 const DepartmentMain = () => {

@@ -5,26 +5,19 @@ function LandingContect() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [response, setResponse] = useState("");
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    // Send a POST request to the backend route to save the contact message
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      const response = await axios.post("/api/v1//contact", {
-        name,
-        email,
-        message,
-      });
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
+      const res = await axios.post("/api/contact", { name, email, message });
+      setResponse(res.data);
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      console.log(err);
     }
-
-    // Clear the input fields
-    setName("");
-    setEmail("");
-    setMessage("");
   };
 
   return (
@@ -65,7 +58,7 @@ function LandingContect() {
                 type="text"
                 className="contact__input"
                 value={name}
-                onChange={(event) => setName(event.target.value)}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="contact__content">
@@ -76,7 +69,7 @@ function LandingContect() {
                 type="email"
                 className="contact__input"
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -92,14 +85,11 @@ function LandingContect() {
               rows={7}
               className="contact__input"
               value={message}
-              onChange={(event) => setMessage(event.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <div>
-            <button className="button button--flex">
-              Send Message
-              <i className="uil uil-message button__icon" />
-            </button>
+            <button className="button button--flex">Send Message</button>
           </div>
         </form>
       </div>

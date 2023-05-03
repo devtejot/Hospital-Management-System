@@ -22,6 +22,7 @@ import AboutMain from "./pages/landingpage/AboutMain";
 import BlogMain from "./pages/landingpage/BlogMain";
 import DashboardPage from "./pages/DashboardPage";
 import ContectMain from "./pages/landingpage/ContectMain";
+import Blog from "./pages/doctor/Blog";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -42,6 +43,15 @@ function App() {
           <Route path="/blog" element={<BlogMain />} />
 
           <Route path="/contects" element={<ContectMain />} />
+
+          <Route
+            path="/addblog"
+            element={
+              <ProtectedRoute>
+                <Blog />
+              </ProtectedRoute>
+            }
+          />
 
           <Route
             path="/home"

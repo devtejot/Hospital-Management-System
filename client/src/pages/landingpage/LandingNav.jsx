@@ -46,7 +46,7 @@ const LandingNav = () => {
             <li className="nav__item">
               <a href="/login" className="nav__link">
                 <i className="uil uil-message nav__icon" />
-                ADMIN
+                LOGIN
               </a>
             </li>
           </ul>

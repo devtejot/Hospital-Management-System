@@ -1,45 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import LandingFooter from "./LandingFooter";
 import LandingNav from "./LandingNav";
 
 const BlogMain = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const res = await axios.get("/api/blogs");
+      setBlogs(res.data);
+    }
+    fetchData();
+  }, []);
+
   return (
     <>
       <LandingNav />
       <section className="services section" id="services">
         <h2 className="section__title">Blog</h2>
-        <span className="section__subtitle">What we offer</span>
+        <span className="section__subtitle">What our doctors says</span>
         <div className="container ">
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
-          >
-            <div className="doccard">
-              <div className="dcard-body">
-                <h5 className="dcard-header">Dental</h5>
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    justifyContent: "center",
-                  }}
-                  className="departtital"
-                >
-                  <h5 className="dcard-header">By j.k</h5>
-                </div>
+          {blogs.map((blog) => (
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
+              <div className="blogcard">
+                <div className="card-body">
+                  <h5 className="card-header">{blog.title}</h5>
 
-                <div className="dcard-body">
-                  <p>
-                    This department focuses on the diagnosis, treatment, and
-                    prevention of heart-related diseases and conditions.
-                  </p>
+                  <div className="card-body">
+                    <p>{blog.body}</p>
+                  </div>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      justifyContent: "center",
+                    }}
+                    className="departtital"
+                  >
+                    <h5 className="card-header">Author: {blog.author}</h5>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
       <LandingFooter />

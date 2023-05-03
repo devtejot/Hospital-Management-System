@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LandingNav from "./LandingNav";
-import "../../styles/Docpage.css";
 import LandingFooter from "./LandingFooter";
 import { Row } from "antd";
 

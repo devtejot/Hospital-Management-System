@@ -21,7 +21,7 @@ const LandingAbout = () => {
           </p>
 
           <div className="about__buttons">
-            <a href="/contect" className="button button--flex">
+            <a href="/contects" className="button button--flex">
               Contect Us
               <i className="uil uil-arrow-to-bottom button__icon" />
             </a>

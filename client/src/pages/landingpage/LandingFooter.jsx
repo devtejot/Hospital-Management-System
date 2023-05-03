@@ -21,15 +21,12 @@ const LandingFooter = () => {
           <div className="footer-section-columns">
             <span>About Us</span>
             <span>Help</span>
-            <span>Contect</span>
             <span>Carrers</span>
-            <span>Testimonials</span>
             <span>Work</span>
           </div>
           <div className="footer-section-columns">
             <span>244-5333-7783</span>
             <span>Test@gmail.com</span>
-            <span>press@gmail.com</span>
             <span>contact@gmail.com</span>
           </div>
           <div className="footer-section-columns">

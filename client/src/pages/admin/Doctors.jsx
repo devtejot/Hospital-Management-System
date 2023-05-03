@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 
 const Doctors = () => {
   const [users, setDoctors] = useState([]);
+
   const getDoctors = async () => {
     try {
       const res = await axios.get("/api/v1/admin/getAllDoctors", {
@@ -75,7 +76,12 @@ const Doctors = () => {
               Approve
             </button>
           ) : (
-            <button className="btn btn-danger">Reject</button>
+            <button
+              className="btn btn-danger"
+              onClick={() => handleAccountStatus(record, "Pending")}
+            >
+              Reject
+            </button>
           )}
         </div>
       ),

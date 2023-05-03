@@ -3,9 +3,10 @@ import { Carousel } from "antd";
 
 const contentStyle = {
   margin: 0,
-  height: "300px",
+  padding: 15,
+  borderRadius: 15,
+  height: "200px",
   color: "#fff",
-  lineHeight: "50px",
   textAlign: "center",
   background: "#393E46",
 };

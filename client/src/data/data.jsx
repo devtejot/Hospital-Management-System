@@ -24,12 +24,12 @@ export const adminMenu = [
     icon: "fa-solid fa-desktop",
   },
   {
-    name: "Home",
+    name: "Available Doctors",
     path: "/home",
-    icon: "fa-solid fa-house",
+    icon: "fa-solid fa-stethoscope",
   },
   {
-    name: "Doctors",
+    name: "Doctor List",
     path: "/admin/doctors",
     icon: "fa-solid fa-user-doctor",
   },

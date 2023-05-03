@@ -5,9 +5,10 @@ const {
   getAllUsersController,
   getAllDoctorsController,
   changeAccountStatusController,
-  contectUs,
+  getAllAppointmentsController,
+  deleteUserController,
 } = require("../controllers/adminCtrl");
-const Contact = require("../models/contectModel");
+const userModel = require("../models/userModels");
 
 // get all doctors
 router.get("/getAllDoctors", authMiddleware, getAllDoctorsController);
@@ -22,6 +23,10 @@ router.post(
   changeAccountStatusController
 );
 
-router.post("/contact", contectUs);
+//get all appointment
+router.get("/getAllAppointments", authMiddleware, getAllAppointmentsController);
+
+//delete user from database
+router.delete("/deleteUser/:id", deleteUserController);
 
 module.exports = router;
