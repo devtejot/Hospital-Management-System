@@ -159,12 +159,7 @@ const BookingPage = () => {
                         setTime(moment(value).format("HH:mm"));
                       }}
                     />
-                    <button
-                      className="btn btn-primary mt-2"
-                      onClick={handleAvailbility}
-                    >
-                      Check Availability
-                    </button>
+
                     <button
                       className="btn btn-dark mt-2"
                       onClick={handleBooking}
